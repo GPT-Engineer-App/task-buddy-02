@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Container, VStack, HStack, Input, Button, Checkbox, Text } from "@chakra-ui/react";
+import { Container, VStack, HStack, Input, Button, Checkbox, Text, Link } from "@chakra-ui/react";
 import { FaPlus, FaTrash } from "react-icons/fa";
+import { Link as RouterLink } from "react-router-dom"; // Import RouterLink
 
 const Index = () => {
   const [tasks, setTasks] = useState([]);
@@ -44,6 +45,7 @@ const Index = () => {
             </HStack>
           ))}
         </VStack>
+        <Link as={RouterLink} to="/about" color="teal.500">About</Link> {/* Add navigation link to About page */}
       </VStack>
     </Container>
   );
